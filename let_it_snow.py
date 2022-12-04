@@ -10,11 +10,14 @@ def main(speed=0, bg_color="grey"):
     # set speed to 'fastest = 0'
     myTurtle.speed(speed)
     # change background color
+    
+
     turtle_screen.bgcolor(bg_color)
+        
   
  
     """TODO: define different colors here"""
-
+    colours = ['black', 'blue', 'red', 'green', 'white','orange','yellow']
 
     for _ in range(10):
         # define some params
@@ -23,6 +26,9 @@ def main(speed=0, bg_color="grey"):
 
         """TODO: set snowflake color here (one of the colors defined above)"""
 
+        rand_colour = np.random.randint(0,4)
+        myTurtle.pencolor(colours[rand_colour])
+        print(colours[rand_colour])
         # Go to the start position of the snowflake
         myTurtle.penup()
         myTurtle.goto(pos[0], pos[1])
